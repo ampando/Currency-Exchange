@@ -1,48 +1,60 @@
-# PROJECT NAME
+# Currency Exchange
 
-#### SHORT DESCR
+#### API Calls and Asynchronous Code
 
 #### Adrienne Matosich 
 
 ## Description
 
-Long description.
-
-### Specs
-| Spec | Input | Output |
-| :-------------     | :------------- | :------------- |
-
+This project was created to focus on practicing asynchronous code with JavaScript, and how to apply that to API calls. To demonstrate, I have created a currency exchange website. Using an exchange rate API to ensure the user receives the most recent exchange rate available. Published site is available here: [gh-pages](https://ampando.github.io/Currency-Exchange/)
 
 ## Setup/Installation Requirements  
-  * Open your bash terminal
-  * Clone this repository using: 'git clone https://github.com/ampando/xxxxx.git'
-  * Navigate to the "xxxx" folder using 'cd xxxx'
-  * Open with VS Code using 'code .' command or another text editor of your choosing
-  * Run $npm install to install dependencies
-  * Run $npm run build to build environment
-  * Run $npm run start to open a web server to view the site
-  * Run $npm run test to test the application with Jest.
-  * Also viewable on GitHub pages here: https://ampando.github.io/xxxx/
+  
+  * Software Requirements:
 
+  1. Internet Browser
+  2. A code editor, such as Visual Studio Code to view, and/or edit the code base. 
+  
+  * To Open:
+
+  1. Navigate to the [Currency-Exchange](https://github.com/ampando/Currency-Exchange) repository or open your terminal.
+  
+  2. Clone this repository using:  `git clone https://github.com/ampando/Currency-Exchange.git`
+  
+  3. Navigate to the `Currency-Exchange` directory in your editor of choice using `cd Currency-Exchange`.
+  
+  4. Open the directory with VS Code/or your editor of choice using the `code .` command.
+  
+  5. Create a .env file in the root directory of your cloned project. This is where your *personal* API key will be stored. 
+    The .env file has already been added to the .gitignore file of this repository.
+  
+  6. Navigate to the [Exchange Rate API](https://www.exchangerate-api.com/) website. 
+  
+  7. Create a free account to get a free API key. 
+  
+  8. Copy and paste your personal API key and store it in the .env file. 
+    Example: API_KEY = YOUR UNIQUE API KEY GOES HERE
+  Run $npm install to install dependencies
+  
+  9. Once your API key is set up, enter `npm install` in your terminal to install all webpack plugins. When complete `npm run build` will build webpack environment. To view the project in your browser enter`npm run start`.
+  
 ## Known Bugs
-  * No known bugs. 
+* There are no known bugs at this time. 
+
+## Support and contact details
+Please contact me at amatosich@gmail.com with any questions or concerns. 
 
 ## Technologies Used
 
 Technology Used!
 * HTML
+* Visual Studio Code 
 * CSS
 * Bootstrap
 * Javascript
 * JQuery
-* Jest
-* ESLint
-* Babel
+* Markdown
 * Webpack 
-
-## Support and contact details
-
-Contact me at amatosich@gmail.com with any questions or concerns. 
 
 ### License
 
