@@ -34,7 +34,6 @@ This project was created to focus on practicing asynchronous code with JavaScrip
   
   8. Copy and paste your personal API key and store it in the .env file. 
     Example: API_KEY = YOUR UNIQUE API KEY GOES HERE
-  Run $npm install to install dependencies
   
   9. Once your API key is set up, enter `npm install` in your terminal to install all webpack plugins. When complete `npm run build` will build webpack environment. To view the project in your browser enter`npm run start`.
   
@@ -46,7 +45,6 @@ Please contact me at amatosich@gmail.com with any questions or concerns.
 
 ## Technologies Used
 
-Technology Used!
 * HTML
 * Visual Studio Code 
 * CSS
