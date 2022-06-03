@@ -1,19 +1,13 @@
-/*export default class Template {
-  constructor() {
-    this.side1 = side1;
-    this.side2 = side2;
-    this.side3 = side3;
+export default class CoinService {
+  static async getExchange(rate) {
+    try {
+      const response = await fetch (`https://v6.exchangerate-api.com/v6/${process.env.API_KEY}latest/USD`);
+      if (!response.ok) {
+      throw Error(response);
+      }
+      return response.json();
+    } catch (error) {
+      return error.message;
+    }  
   }
-
-  checkType() {
-    if ((this.side1 > (this.side2 + this.side3)) || (this.side2 > (this.side1 + this.side3)) || (this.side3 > (this.side1 + this.side2))) {
-      return "not a triangle";
-    } else if ((this.side1 !== this.side2) && ((this.side1 !== this.side3)) && ((this.side2 !== this.side3))) {
-      return "scalene triangle";
-    }  else if ((this.side1 === this.side2) && (this.side1 === this.side3)) {
-      return "equilateral triangle";
-    } else {
-      return "isosceles triangle";
-    }
-  }    
-}*/
+}
