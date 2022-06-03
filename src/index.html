@@ -10,23 +10,19 @@
   <div class ="container">
     <header>
       <h4>Check currency exchange rates here!</h4>
-      <label for="current">Enter a U.S. dollar amount, then select another currency to compare rates.</label>
+      <label id="current">Select a U.S. dollar amount to convert to another currency.</label>
     </header>
     <div class="form-group row">
-    <div class="col-xs-3">
-      <input id="current" type="number" class="input-sm" min="0" max="1000000" step="any" required> 
+    <div class="col-md-3">
+      <input id="usdInput" type="number" class="input-sm" min="0" max="1000000" step="any" required> 
     </div>
-    <div class="col-xs-3">
-      <label id="usdInput">USD</label>
-    </div>
-    <div id="results" class="col-xs-3">
+      <label id="usdLabel">United States Dollars</label>
+    <div id="select" class="col-sm-3">
     </div>
   </div>
   <select class="form-group" id="otherCurrency">
     <option></option>
-    <option value="AED">UAE Dirham</option>
     <option value="AFN">Afghan Afghani</option>
-    <option value="ANG">Netherlands Antillian</option>
     <option value="AUD">Australian Dollar</option>
     <option value="BAM">Bosnia Mark</option>
     <option value="BBD">Barbados Dollar</option>
@@ -55,6 +51,7 @@
     <option value="MMK">Burmese Kyat</option>
     <option value="MVR">Maldivian Rufiyaa</option>
     <option value="MXN">Mexican Peso</option>
+    <option value="ANG">Netherlands Antillian</option>
     <option value="NOK">Norwegian Krone</option>
     <option value="NZD">New Zealand Dollar</option>
     <option value="RUB">Russian Ruble</option>
@@ -63,10 +60,10 @@
     <option value="UAH">Ukrainian Hryvnia</option>
   </select>
     <button class="btn-success" id="coinTotal">Exchange Currency</button>  
+    <iframe src="https://giphy.com/embed/pP659YwGhWDTi" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/baby-money-cash-pP659YwGhWDTi"></a></p>  
 </form>
   <div class="showErrors"></div>
   <div class="showRate"></div>
   </div>
-  <iframe src="https://giphy.com/embed/pP659YwGhWDTi" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/baby-money-cash-pP659YwGhWDTi"></a></p>
-</body>
+  </body>
 </html>
