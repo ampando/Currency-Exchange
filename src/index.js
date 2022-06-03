@@ -13,7 +13,7 @@ function clearFields() {
 function getElements(response) {
   if (response.result === "success"); {
     $('.showRate').text(`The rate of exchange is ${response.conversion_rate}%`);
-    $('.showErrors').text(`There was an error: ${response.message}`);
+    $('.showError').text(`There was an error: ${response}`);
   }
 }
 async function makeApiCall(rate) {
@@ -24,7 +24,7 @@ async function makeApiCall(rate) {
 $(document).ready(function() {
   $('#coinTotal').click(function() {
     let rate = $('#current').val();
-    console.log(rate);
     clearFields();
+    makeApiCall(rate);
   });
 });
