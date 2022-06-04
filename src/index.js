@@ -24,6 +24,7 @@ async function makeApiCall(rate) {
 $(document).ready(function() {
   $('#coinTotal').click(function() {
     let rate = $('#current').val();
+    console.log(rate);
     clearFields();
     makeApiCall(rate);
   });
