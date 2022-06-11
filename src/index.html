@@ -12,6 +12,7 @@
       <h4>Check currency exchange rates here!</h4>
       <label id="current">Select a U.S. dollar amount to convert to another currency.</label>
     </header>
+  <form id="currencyForm">
     <div class="form-group row">
     <div class="col-md-3">
       <input id="usdInput" type="number" class="input-sm" min="0" max="1000000" step="any" required> 
@@ -20,50 +21,18 @@
     <div id="select" class="col-sm-3">
     </div>
   </div>
-  <select class="form-group" id="otherCurrency">
-    <label id="currency">Choose concurrency to convert to:</label><br>
+  <select class="otherCurrency">
     <option></option>
-    <option value="AFN">Afghan Afghani</option>
     <option value="AUD">Australian Dollar</option>
-    <option value="BAM">Bosnia Mark</option>
-    <option value="BBD">Barbados Dollar</option>
-    <option value="BDT">Bangladeshi Taka</option>
-    <option value="BOB">Bolivian Boliviano</option>
-    <option value="BRL">Brazilian Real</option>
-    <option value="CAD">Canadian Dollar</option>
-    <option value="CHF">Swiss Franc</option>
-    <option value="CNY">Chinese Renminbi</option>
-    <option value="CUP">Cuban Peso</option>
-    <option value="CZK">Czech Koruna</option>
-    <option value="DKK">Danish Krone</option>
-    <option value="EUR">Euro</option>
-    <option value="FJD">Fiji Dollar</option>
-    <option value="GEL">Georgian Lari</option>
-    <option value="GTQ">Guatemalan Quetzal</option>
-    <option value="HKD">Hong Kong Dollar</option>
-    <option value="HRK">Croatian Kuna</option>
-    <option value="ILS">Israeli New Shekel</option>
-    <option value="INR">Indian Rupi</option>
-    <option value="IRR">Iranian Rial</option>
-    <option value="ISK">Icelandic Krona</option>
-    <option value="JMD">Jamaican Dollar</option>
-    <option value="JPY">Japanese Yen</option>
-    <option value="MAD">Moroccan Dirham</option>
     <option value="MMK">Burmese Kyat</option>
     <option value="MVR">Maldivian Rufiyaa</option>
-    <option value="MXN">Mexican Peso</option>
-    <option value="ANG">Netherlands Antillian</option>
-    <option value="NOK">Norwegian Krone</option>
-    <option value="NZD">New Zealand Dollar</option>
-    <option value="RUB">Russian Ruble</option>
-    <option value="SEK">Swedish Krona</option>
     <option value="THB">Thai Baht</option>
     <option value="UAH">Ukrainian Hryvnia</option>
   </select>
     <button class="btn-success" id="coinTotal">Exchange Currency</button>  
     <iframe src="https://giphy.com/embed/pP659YwGhWDTi" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/baby-money-cash-pP659YwGhWDTi"></a></p>  
 </form>
-  <div class="showError"></div>
+  <div class="error"></div>
   <div class="showRate"></div>
   </div>
   </body>

@@ -1,13 +1,14 @@
-export default class CoinService {
-  static async getExchange(conversion_rate) {
-    try {
-      const response = await fetch(`https://v6.exchangerate-api.com/v6/${conversion_rate}&appid=${process.env.API_KEY}latest/USD`);
-      if (!response.ok) {
-        throw Error(response);
-      }
-      return response.json();
-    } catch (error) {
-      return error.message;
+export async function getExchange() {
+  try {
+    const response = await fetch(`https://v6.exchangerate-api.com/v6/${process.env.API_KEY}/latest/USD`);
+    let jsonResponse;
+    if (response.ok) {
+      jsonResponse = await response.json();
+    } else {
+      jsonResponse = false; 
     }
+    return jsonResponse;
+  } catch (error) {
+    return error.message;
   }
 }

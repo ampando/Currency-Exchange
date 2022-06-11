@@ -1,4 +1,4 @@
-import CoinService from './coin-service.js';
+import { getExchange } from './coin-service.js';
 import $ from 'jquery';
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -10,22 +10,33 @@ function clearFields() {
   $('.showRate').text("");
 }
 
-function getElements(response) {
-  if (response.result === "success"); {
-    $('.showRate').text(`The rate of exchange is ${response.conversion_rate}%`);
-    $('.showError').text(`There was an error: ${response}`);
+function getElements(response, rate, usdAmount) {
+  if (rate === "AUD") { 
+    $('.showRate').text(`Your rate of exchange is ${(response.conversion_rates.AUD * usdAmount).toFixed(2)}`);
+  } else if (rate === "MMK") {
+    $('.showRate').text(`Your rate of exchange is ${(response.conversion_rates.MMK * usdAmount).toFixed(2)}`);
+  } else if (rate === "MVR") {
+    $('.showRate').text(`Your rate of exchange is ${(response.conversion_rates.MVR * usdAmount).toFixed(2)}`);
+  } else if (rate === "THB") {
+    $('.showRate').text(`Your rate of exchange is ${(response.conversion_rates.THB * usdAmount).toFixed(2)}`);
+  } else if (rate === "UAH")
+    $('.showRate').text(`Your rate of exchange is ${(response.conversion_rates.UAH * usdAmount).toFixed(2)}`);
+} 
+async function makeApiCall(rate, usdAmount) {
+  const response = await getExchange();
+  if (!response) {
+    $(".error").html('<h3><em>There has been an error processing your request</em></h3>');
+  } else {
+    getElements(response, rate, usdAmount);
   }
 }
-async function makeApiCall(rate) {
-  const response = await CoinService.getExchange(rate);
-  getElements(response);
-}
-
 $(document).ready(function() {
-  $('#coinTotal').click(function() {
-    let rate = $('#current').val();
-    console.log(rate);
+  $('#currencyForm').submit(function(event) {
+    event.preventDefault();
+    let rate = $('.otherCurrency').val();
+    let usdAmount = parseInt($('#usdInput').val()); 
+    makeApiCall(rate, usdAmount);
     clearFields();
-    makeApiCall(rate);
   });
 });
+
